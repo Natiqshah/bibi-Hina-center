@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bibi Hina Center | Education & Learning</title>
+<meta name="description" content="Bibi Hina Center - Learn, Practice and Succeed.">
+
+<style>
+:root{
+  --primary:#0b5ed7;
+  --primary-dark:#084298;
+  --secondary:#f59e0b;
+  --ink:#172033;
+  --muted:#667085;
+  --bg:#f6f8fc;
+  --card:#fff;
+  --line:#e6eaf0;
+  --success:#16a34a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+.topbar{background:var(--primary-dark);color:#fff;padding:9px 0;font-size:14px}
+.topbar .container{display:flex;justify-content:space-between;gap:15px}
+nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--line)}
+.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:22px;color:var(--primary-dark)}
+.logo-mark{width:43px;height:43px;border-radius:12px;background:linear-gradient(135deg,var(--primary),#3d8bfd);color:#fff;display:grid;place-items:center;font-size:23px;box-shadow:0 7px 18px #0b5ed733}
+.nav-links{display:flex;gap:25px;align-items:center;font-weight:600;color:#344054}
+.nav-links a:hover{color:var(--primary)}
+.nav-btn{background:var(--primary);color:#fff;padding:11px 17px;border-radius:9px}
+.menu{display:none;border:0;background:#eef4ff;padding:9px;border-radius:8px;font-size:21px}
+.hero{background:linear-gradient(120deg,#eef5ff 0%,#fff 55%,#fff8e8 100%);padding:72px 0 78px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:50px}
+.badge{display:inline-block;background:#e7f0ff;color:var(--primary-dark);font-weight:800;padding:7px 12px;border-radius:30px;margin-bottom:18px}
+.hero h1{font-size:clamp(40px,6vw,64px);line-height:1.08;margin-bottom:20px;letter-spacing:-1.5px}
+.hero h1 span{color:var(--primary)}
+.hero p{font-size:18px;color:var(--muted);max-width:650px;margin-bottom:28px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{border:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:10px;font-weight:800;font-size:15px}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:0 8px 20px #0b5ed733}
+.btn-primary:hover{background:var(--primary-dark)}
+.btn-light{background:#fff;border:1px solid var(--line)}
+.hero-visual{position:relative}
+.hero-card{background:#fff;border:1px solid var(--line);border-radius:25px;padding:34px;box-shadow:0 20px 55px #1b2a4a18}
+.study-icon{font-size:86px;text-align:center;margin-bottom:10px}
+.hero-card h3{text-align:center;font-size:24px}
+.hero-card p{text-align:center;color:var(--muted);margin-top:5px}
+.floating{position:absolute;background:#fff;padding:13px 16px;border-radius:13px;box-shadow:0 12px 30px #1b2a4a20;font-weight:800}
+.float-one{left:-25px;top:18px}.float-two{right:-20px;bottom:25px}
+.stats{background:#fff;border-bottom:1px solid var(--line)}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);padding:24px 0}
+.stat{text-align:center;border-right:1px solid var(--line)}
+.stat:last-child{border:0}.stat strong{display:block;font-size:28px;color:var(--primary)}.stat span{color:var(--muted);font-size:14px}
+section{padding:78px 0}
+.section-head{text-align:center;max-width:650px;margin:0 auto 40px}
+.section-head h2{font-size:36px;line-height:1.15;margin-bottom:10px}
+.section-head p{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:26px;transition:.25s;box-shadow:0 8px 24px #1b2a4a08}
+.card:hover{transform:translateY(-5px);box-shadow:0 16px 32px #1b2a4a12}
+.icon{width:54px;height:54px;border-radius:14px;background:#eef5ff;display:grid;place-items:center;font-size:28px;margin-bottom:16px}
+.card h3{margin-bottom:7px}.card p{color:var(--muted);font-size:14px}
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.about-box{background:linear-gradient(135deg,var(--primary-dark),var(--primary));color:#fff;border-radius:24px;padding:38px;min-height:280px;display:flex;flex-direction:column;justify-content:center}
+.about-box .big{font-size:64px;margin-bottom:10px}
+.about-list{display:grid;gap:14px;margin-top:22px}
+.about-list div{display:flex;gap:10px;align-items:flex-start}.check{color:var(--success);font-weight:900}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feature{background:#fff;border:1px solid var(--line);padding:28px;border-radius:17px}
+.feature b{font-size:18px}.feature p{color:var(--muted);margin-top:7px}
+#test{background:#eef4ff}
+.quiz{max-width:780px;margin:auto;background:#fff;border-radius:20px;border:1px solid var(--line);padding:30px;box-shadow:0 15px 45px #1b2a4a12}
+.quiz-top{display:flex;justify-content:space-between;font-weight:800;margin-bottom:15px}
+.timer{color:#dc2626}
+.progress{height:8px;background:#e8edf5;border-radius:10px;overflow:hidden;margin-bottom:28px}.progress-bar{height:100%;background:var(--primary);width:0;transition:.25s}
+.question{font-size:22px;font-weight:800;margin-bottom:18px}
+.option{padding:14px 16px;border:2px solid #e5e7eb;border-radius:11px;margin:10px 0;cursor:pointer;transition:.2s}
+.option:hover{border-color:#8bb5ef;background:#f7faff}.option.selected{border-color:var(--primary);background:#eaf2ff}
+.quiz-result{text-align:center;display:none}.score{font-size:62px;font-weight:900;color:var(--primary);margin:12px}
+.contact{background:#fff}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact-card{background:var(--bg);padding:28px;border-radius:17px;border:1px solid var(--line)}
+.contact-row{padding:12px 0;border-bottom:1px solid var(--line)}.contact-row:last-child{border:0}
+footer{background:#101828;color:#d0d5dd;padding:40px 0 22px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:35px;margin-bottom:30px}.footer-title{color:#fff;font-weight:800;margin-bottom:12px}.footer-links{display:grid;gap:7px}.copyright{text-align:center;border-top:1px solid #344054;padding-top:18px;font-size:13px}
+@media(max-width:900px){
+ .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+ .cards{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr}
+ .stat-grid{grid-template-columns:repeat(2,1fr);gap:18px}.stat{border:0}
+ .nav-links{display:none}.menu{display:block}
+}
+@media(max-width:600px){
+ .topbar .container{flex-direction:column;text-align:center}
+ .cards{grid-template-columns:1fr}.hero{padding-top:50px}.hero-card{padding:25px}
+ .floating{display:none}.section-head h2{font-size:30px}.quiz{padding:20px}
+}
+</style>
+</head>
+
+<body>
+<div class="topbar">
+  <div class="container">
+    <span>🎓 Quality Education • Practice • Progress</span>
+    <span>📞 Contact Bibi Hina Center</span>
+  </div>
+</div>
+
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" href="#home"><span class="logo-mark">BH</span> Bibi Hina Center</a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#about">About</a>
+      <a href="#test">Online Test</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-btn" href="#test">Take Test</a>
+    </div>
+    <button class="menu" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">WELCOME TO BIBI HINA CENTER</span>
+      <h1>Learn Today.<br><span>Achieve Tomorrow.</span></h1>
+      <p>A student-friendly education platform for learning subjects, practicing questions and checking your knowledge with interactive tests.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#test">📝 Start Online Test</a>
+        <a class="btn btn-light" href="#subjects">📚 Explore Subjects</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="floating float-one">📖 Easy Learning</div>
+      <div class="hero-card">
+        <div class="study-icon">🎓</div>
+        <h3>Learn • Practice • Succeed</h3>
+        <p>Build knowledge with Bibi Hina Center.</p>
+      </div>
+      <div class="floating float-two">🏆 Keep Improving!</div>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="container stat-grid">
+    <div class="stat"><strong>4+</strong><span>Core Subjects</span></div>
+    <div class="stat"><strong>5</strong><span>Demo Questions</span></div>
+    <div class="stat"><strong>60s</strong><span>Test Timer</span></div>
+    <div class="stat"><strong>100%</strong><span>Instant Results</span></div>
+  </div>
+</div>
+
+<section id="subjects">
+  <div class="container">
+    <div class="section-head">
+      <h2>Our Learning Subjects</h2>
+      <p>Explore the main areas available on the current Bibi Hina Center platform.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><div class="icon">🔢</div><h3>Mathematics</h3><p>Numbers, algebra, geometry and problem solving.</p></div>
+      <div class="card"><div class="icon">🔬</div><h3>Science</h3><p>Explore physics, chemistry and biology.</p></div>
+      <div class="card"><div class="icon">🌍</div><h3>Geography</h3><p>Learn about countries, maps and our planet.</p></div>
+      <div class="card"><div class="icon">💻</div><h3>Computer</h3><p>Learn programming and modern technology.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-box">
+      <div class="big">🏫</div>
+      <h2>Welcome to Bibi Hina Center</h2>
+      <p>A modern-looking student learning space built around learning, practice and progress.</p>
+    </div>
+    <div>
+      <div class="section-head" style="text-align:left;margin:0">
+        <h2>Why choose our platform?</h2>
+        <p>The original website already included easy learning, practice tests and score tracking. This redesign presents those features in a cleaner academy layout.</p>
+      </div>
+      <div class="about-list">
+        <div><span class="check">✓</span><span>Simple and student-friendly learning experience</span></div>
+        <div><span class="check">✓</span><span>Interactive online test with automatic marking</span></div>
+        <div><span class="check">✓</span><span>Instant score and performance message</span></div>
+        <div><span class="check">✓</span><span>Responsive design for mobile and desktop</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>Learning Made Simple</h2>
+      <p>Everything is organized so students can move from learning to practice quickly.</p>
+    </div>
+    <div class="features">
+      <div class="feature"><div class="icon">📖</div><b>Easy Learning</b><p>Clear sections make it easy to find the subject or activity you need.</p></div>
+      <div class="feature"><div class="icon">🧠</div><b>Practice Tests</b><p>Answer multiple-choice questions and test your understanding.</p></div>
+      <div class="feature"><div class="icon">🏆</div><b>Instant Results</b><p>See your score immediately after finishing the test.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="test">
+  <div class="container">
+    <div class="section-head">
+      <h2>📝 Online Knowledge Test</h2>
+      <p>Try the demo test below. Select an answer and move through all five questions.</p>
+    </div>
+    <div class="quiz">
+      <div id="quiz">
+        <div class="quiz-top"><span id="question-number">Question 1 / 5</span><span class="timer">⏱ <span id="time">60</span>s</span></div>
+        <div class="progress"><div class="progress-bar" id="progress"></div></div>
+        <div class="question" id="question"></div>
+        <div id="options"></div>
+        <button class="btn btn-primary" onclick="nextQuestion()">Next Question →</button>
+      </div>
+      <div class="quiz-result" id="result">
+        <h2>🎉 Test Completed!</h2>
+        <div class="score" id="score"></div>
+        <p id="message"></p>
+        <br>
+        <button class="btn btn-primary" onclick="startTest()">🔄 Try Again</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <h2>Contact & Information</h2>
+      <p>Replace these placeholders with your center's real contact details before publishing.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>📍 Center Information</h3>
+        <div class="contact-row"><b>Center:</b> Bibi Hina Center</div>
+        <div class="contact-row"><b>Location:</b> Add your center address</div>
+        <div class="contact-row"><b>Phone:</b> Add your phone number</div>
+      </div>
+      <div class="contact-card">
+        <h3>📩 Quick Links</h3>
+        <div class="contact-row"><a href="#subjects">📚 View Subjects</a></div>
+        <div class="contact-row"><a href="#test">📝 Take Online Test</a></div>
+        <div class="contact-row"><a href="#home">⬆ Back to Home</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div><div class="footer-title">🎓 Bibi Hina Center</div><p>Learn Today, Lead Tomorrow.</p></div>
+    <div><div class="footer-title">Quick Links</div><div class="footer-links"><a href="#home">Home</a><a href="#subjects">Subjects</a><a href="#test">Online Test</a></div></div>
+    <div><div class="footer-title">Learning</div><div class="footer-links"><a href="#about">About</a><a href="#contact">Contact</a></div></div>
+  </div>
+  <div class="container copyright">© 2026 Bibi Hina Center • Education Platform</div>
+</footer>
+
+<script>
+const questions=[
+ {question:"What is 12 × 5?",options:["50","60","70","80"],answer:"60"},
+ {question:"Which planet is known as the Red Planet?",options:["Earth","Mars","Jupiter","Venus"],answer:"Mars"},
+ {question:"What does HTML stand for?",options:["Hyper Text Markup Language","High Technology Modern Language","Hyper Tool Multi Language","Home Text Markup Language"],answer:"Hyper Text Markup Language"},
+ {question:"Which gas do humans need to breathe?",options:["Oxygen","Carbon Dioxide","Hydrogen","Helium"],answer:"Oxygen"},
+ {question:"How many continents are there?",options:["5","6","7","8"],answer:"7"}
+];
+let currentQuestion=0,score=0,selectedAnswer=null,timeLeft=60,timer;
+
+function startTest(){
+ currentQuestion=0;score=0;selectedAnswer=null;timeLeft=60;
+ document.getElementById("quiz").style.display="block";
+ document.getElementById("result").style.display="none";
+ document.getElementById("time").textContent=timeLeft;
+ clearInterval(timer);loadQuestion();
+ timer=setInterval(()=>{timeLeft--;document.getElementById("time").textContent=timeLeft;if(timeLeft<=0)finishTest()},1000);
+}
+function loadQuestion(){
+ const q=questions[currentQuestion];
+ document.getElementById("question-number").textContent=`Question ${currentQuestion+1} / ${questions.length}`;
+ document.getElementById("question").textContent=q.question;
+ const box=document.getElementById("options");box.innerHTML="";selectedAnswer=null;
+ q.options.forEach(option=>{
+   const el=document.createElement("div");el.className="option";el.textContent=option;
+   el.onclick=()=>{document.querySelectorAll(".option").forEach(x=>x.classList.remove("selected"));el.classList.add("selected");selectedAnswer=option};
+   box.appendChild(el);
+ });
+ document.getElementById("progress").style.width=((currentQuestion)/questions.length*100)+"%";
+}
+function nextQuestion(){
+ if(selectedAnswer===null){alert("Please select an answer first!");return}
+ if(selectedAnswer===questions[currentQuestion].answer)score++;
+ currentQuestion++;
+ if(currentQuestion>=questions.length)finishTest();else loadQuestion();
+}
+function finishTest(){
+ clearInterval(timer);document.getElementById("quiz").style.display="none";document.getElementById("result").style.display="block";
+ document.getElementById("score").textContent=`${score} / ${questions.length}`;
+ const p=score/questions.length*100;
+ document.getElementById("message").textContent=p===100?"🏆 Perfect score! Excellent work!":p>=60?"👏 Great job! Keep learning and improving.":"💪 Keep practicing and try again!";
+}
+function toggleMenu(){
+ const links=document.querySelector(".nav-links");
+ links.style.display=links.style.display==="flex"?"none":"flex";
+ if(links.style.display==="flex"){links.style.flexDirection="column";links.style.position="absolute";links.style.top="76px";links.style.left="0";links.style.right="0";links.style.padding="20px";links.style.background="#fff";links.style.borderBottom="1px solid #e6eaf0"}
+}
+startTest();
+</script>
+</body>
+</html>
